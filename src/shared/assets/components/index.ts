@@ -1,2 +1,2 @@
 export { default as IconCard } from './IconCard';
-export { default as Button } from './common/Button';
+export { default as Button } from './common/button/Button';
