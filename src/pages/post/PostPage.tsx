@@ -43,7 +43,7 @@ const PostPage = () => {
         </div>
       </div>
 
-      <ContentInput 
+      <ContentInput
         value={content}
         onChange={setContent}
         placeholder='오늘 가장 따뜻했던 순간을 적어주세요!'
