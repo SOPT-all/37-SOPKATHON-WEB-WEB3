@@ -1,5 +1,5 @@
 import { themeVars } from "@/styles/theme.css";
-import { style, styleVariants } from "@vanilla-extract/css";
+import { style } from "@vanilla-extract/css";
 
 export const headerStyle = style({
   display: "flex",
