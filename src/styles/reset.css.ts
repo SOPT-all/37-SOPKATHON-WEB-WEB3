@@ -1,4 +1,4 @@
-import { globalStyle } from "@vanilla-extract/css";
+import { globalStyle } from '@vanilla-extract/css';
 
 globalStyle(
   `
@@ -20,9 +20,9 @@ globalStyle(
     margin: 0,
     padding: 0,
     border: 0,
-    fontSize: "100%",
-    font: "inherit",
-    verticalAlign: "baseline",
+    fontSize: '100%',
+    font: 'inherit',
+    verticalAlign: 'baseline',
   }
 );
 
@@ -33,38 +33,55 @@ globalStyle(
   footer, header, hgroup, menu, nav, section
 `,
   {
-    display: "block",
+    display: 'block',
   }
 );
 
-globalStyle("body", {
+globalStyle('body', {
   lineHeight: 1,
 });
 
-globalStyle("ol, ul", {
-  listStyle: "none",
+globalStyle('ol, ul', {
+  listStyle: 'none',
 });
 
-globalStyle("blockquote, q", {
-  quotes: "none",
+globalStyle('blockquote, q', {
+  quotes: 'none',
 });
 
-globalStyle("blockquote:before, blockquote:after, q:before, q:after", {
-  content: "",
+globalStyle('blockquote:before, blockquote:after, q:before, q:after', {
+  content: '',
 });
 
-globalStyle("table", {
-  borderCollapse: "collapse",
+globalStyle('table', {
+  borderCollapse: 'collapse',
   borderSpacing: 0,
 });
 
 /* Chrome, Safari, Edge, Opera */
-globalStyle("input::-webkit-outer-spin-button, input::-webkit-inner-spin-button", {
-  WebkitAppearance: "none",
-  margin: 0,
-});
+globalStyle(
+  'input::-webkit-outer-spin-button, input::-webkit-inner-spin-button',
+  {
+    WebkitAppearance: 'none',
+    margin: 0,
+  }
+);
 
 /* Firefox */
 globalStyle("input[type='number']", {
-  MozAppearance: "textfield",
+  MozAppearance: 'textfield',
+});
+
+/* 버튼, input 커서 포인터 */
+globalStyle("button, input[type='submit'], input[type='button']", {
+  cursor: 'pointer',
+});
+
+globalStyle('a', {
+  cursor: 'pointer',
+  textDecoration: 'none', // 링크 텍스트 밑줄 제거 (일반적인 초기화에 포함되기도 함)
+});
+
+globalStyle("input[type='checkbox'], input[type='radio']", {
+  cursor: 'pointer',
 });
