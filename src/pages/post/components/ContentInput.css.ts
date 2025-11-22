@@ -3,23 +3,21 @@ import { themeVars } from '@/styles/theme.css';
 
 export const container = style({
   padding: '2rem',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '1.6rem',
+  position: 'relative',
+  width: '100%',
 });
 
-export const title = style({
-  ...themeVars.fontStyles.head_sb_18,
-});
-
-export const inputBase = style({
+export const textareaBase = style({
   ...themeVars.fontStyles.body_r_16,
+  width: '100%',
+  minHeight: '20rem',
+  padding: '1.6rem',
+  paddingBottom: '4rem',
+  borderRadius: '1rem',
   border: `2px solid ${themeVars.color.lightgray100}`,
   backgroundColor: themeVars.color.lightgray100,
-  padding: '1.6rem 1.2rem',
-  borderRadius: '1rem',
-  width: '100%',
   outline: 'none',
+  resize: 'none',
   fontFamily: 'inherit',
   color: themeVars.color.black,
 
@@ -33,17 +31,26 @@ export const inputBase = style({
   },
 });
 
-export const input = styleVariants({
+export const textarea = styleVariants({
   default: [
-    inputBase,
+    textareaBase,
     {
       borderColor: themeVars.color.lightgray100,
     },
   ],
   active: [
-    inputBase,
+    textareaBase,
     {
       borderColor: themeVars.color.green500,
     },
   ],
 });
+
+export const counter = style({
+  position: 'absolute',
+  bottom: '3rem',
+  right: '3rem',
+  ...themeVars.fontStyles.body_r_14,
+  color: themeVars.color.green500,
+});
+
