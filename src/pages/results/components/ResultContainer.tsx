@@ -1,9 +1,5 @@
 const ResultContainer = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default ResultContainer
+export default ResultContainer;

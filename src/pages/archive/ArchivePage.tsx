@@ -1,9 +1,5 @@
 const ArchivePage = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default ArchivePage
+export default ArchivePage;

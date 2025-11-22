@@ -1,9 +1,5 @@
 const ResultPage = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default ResultPage
+export default ResultPage;
