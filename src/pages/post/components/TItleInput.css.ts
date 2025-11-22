@@ -2,7 +2,7 @@ import { style, styleVariants } from '@vanilla-extract/css';
 import { themeVars } from '@/styles/theme.css';
 
 export const container = style({
-  padding: '2rem',
+  paddingBottom: '2rem',
   display: 'flex',
   flexDirection: 'column',
   gap: '1.6rem',

@@ -2,7 +2,7 @@ import { style, styleVariants } from '@vanilla-extract/css';
 import { themeVars } from '@/styles/theme.css';
 
 export const container = style({
-  padding: '2rem',
+  paddingBottom: '2rem',
   position: 'relative',
   width: '100%',
 });
@@ -51,14 +51,14 @@ export const counter = styleVariants({
   default: {
     position: 'absolute',
     bottom: '3rem',
-    right: '3rem',
+    right: '1rem',
     ...themeVars.fontStyles.body_r_14,
     color: themeVars.color.lightgray500,
   },
   active: {
     position: 'absolute',
     bottom: '3rem',
-    right: '3rem',
+    right: '1rem',
     ...themeVars.fontStyles.body_r_14,
     color: themeVars.color.green500,
   },
