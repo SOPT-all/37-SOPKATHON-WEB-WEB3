@@ -19,7 +19,7 @@ const router = createBrowserRouter([
         element: <ArchivePage />,
       },
       {
-        path: ROUTES.RESULTS,
+        path: `${ROUTES.RESULTS}/:diaryId`,
         element: <ResultPage />,
       },
       {
