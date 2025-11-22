@@ -74,14 +74,23 @@
        <td>
             (역할분담) <br/>
       </td>
+        <td>
+            (역할분담) <br/>
+      </td>
     </tr>
 </table>
 
 <h2> 🛠 기술스택 </h2>
 
-```
-- React
-```
+| 카테고리 | 기술 스택 |
+| :--- | :--- |
+| **UI Library** | ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black&style=for-the-badge) |
+| **State Management** | ![Zustand](https://img.shields.io/badge/Zustand-5C6078?logo=zustand&logoColor=white&style=for-the-badge) |
+| **Language** | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge) |
+| **Build Tool** | ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white&style=for-the-badge) |
+| **Styling** | ![Vanilla Extract](https://img.shields.io/badge/Vanilla%20Extract-FF69B4?logo=vanillaextract&logoColor=white&style=for-the-badge) |
+| **Package Manager** | ![Pnpm](https://img.shields.io/badge/Pnpm-F69220?logo=pnpm&logoColor=white&style=for-the-badge) |
+| **CI/CD** | ![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white&style=for-the-badge) |
 
 <br/>
 
