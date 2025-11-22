@@ -19,7 +19,9 @@ const Card = ({ label, title, createdAt }: CardProps) => {
         <h3 className={cardTitleStyle}>{title}</h3>
       </div>
       <div>
-        <p className={cardCreatedAtStyle}>{formatDateTime(createdAt)}</p>
+        <p className={cardCreatedAtStyle}>
+          {formatDateTime(createdAt.toString())}
+        </p>
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Header from '@/shared/components/header/Header';
 import * as s from './ResultPage.css';
 import Tab from './components/Tab';
 import ResultTitle from './components/ResultTitle';
@@ -8,6 +7,7 @@ import { useParams, useLocation } from 'react-router-dom';
 import api from '@/apis/instance';
 import { useQuery } from '@tanstack/react-query';
 import type { Label, ResultItem, PostReq } from '@/types/result';
+import { formatDateTime } from '../../shared/utils/formatDate';
 
 export type TabMenu = 'origin' | 'tale';
 
@@ -76,13 +76,12 @@ const ResultPage = () => {
 
   return (
     <div>
-      <Header />
       <Tab click={click} setClick={setClick} />
       <section className={s.section}>
         <ResultTitle
           label={displayLabel}
           title={displayTitle || ''}
-          date={displayDate || ''}
+          date={formatDateTime(displayDate) || ''}
         ></ResultTitle>
         <div className={s.line} />
         <ResultContent
