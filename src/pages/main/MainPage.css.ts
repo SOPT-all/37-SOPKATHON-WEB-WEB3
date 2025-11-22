@@ -3,98 +3,68 @@ import { themeVars } from '@/styles/theme.css';
 
 export const backgroundContainer = style({
   position: 'relative',
-  width: '100%',
-  height: '100%',
   minHeight: '100vh',
   backgroundImage: 'url(/bg_main.webp)',
   backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  flexDirection: 'column',
 });
 
-export const unionLeft = style({
-  position: 'absolute',
-  left: '50.6%',
-  top: '31.8%',
-  transform: 'translate(-50%, -50%) translateX(-7.35rem) translateY(0.7rem)',
-  width: '14.7rem',
-  height: '15.6rem',
-  zIndex: 1,
+export const cloverContainer = style({
+  position: 'relative',
+  width: '33.5rem',
+  height: '33.5rem',
+  marginBottom: '5rem',
 });
 
-export const unionRight = style({
-  position: 'absolute',
-  left: '49.6%',
-  top: '31.8%',
-  transform: 'translate(-50%, -50%) translateX(7.35rem) translateY(0.7rem)',
-  width: '14.7rem',
-  height: '15.6rem',
-  zIndex: 1,
+export const clover = style({
+  width: '100%',
+  height: '100%',
 });
 
-export const unionTop = style({
+const textGroupBase = style({
   position: 'absolute',
-  top: '8.5rem',
-  width: '15.6rem',
-  height: '14.2rem',
-  zIndex: 1,
-});
-
-export const unionBottom = style({
-  position: 'absolute',
-  left: '42%',
-  top: '29%',
-  transform: 'translate(-50%, -50%) translateY(7.65rem)',
-  width: '7.9rem',
-  height: '15.3rem',
-  zIndex: 1,
-});
-
-// 클로버 텍스트 스타일
-export const cloverTextTop = style({
-  position: 'absolute',
-  top: '12.5rem',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  zIndex: 300,
-  pointerEvents: 'none',
-  opacity: '0.6',
+  justifyContent: 'center',
+  zIndex: 1,
+  opacity: 0.6,
 });
 
-export const cloverTextLeft = style({
-  position: 'absolute',
-  left: '50.6%',
-  top: '31.8%',
-  transform: 'translate(-50%, -50%) translateX(-7.35rem) translateY(0.7rem)',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  zIndex: 3,
-  pointerEvents: 'none',
-  opacity: '0.6',
-});
+export const cloverTextTop = style([
+  textGroupBase,
+  {
+    top: '15%',
+    left: '50%',
+    transform: 'translateX(-50%)',
+  },
+]);
 
-export const cloverTextRight = style({
-  position: 'absolute',
-  left: '49.6%',
-  top: '31.8%',
-  transform: 'translate(-50%, -50%) translateX(7.35rem) translateY(0.7rem)',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  zIndex: 3,
-  pointerEvents: 'none',
-  opacity: '0.6',
-});
+export const cloverTextLeft = style([
+  textGroupBase,
+  {
+    bottom: '33%',
+    left: '23%',
+  },
+]);
+
+// 👉 오른쪽 잎 (사랑)
+export const cloverTextRight = style([
+  textGroupBase,
+  {
+    bottom: '33%',
+    right: '23%',
+  },
+]);
 
 export const cloverLabel = style({
   ...themeVars.fontStyles.caption1_b_12,
   color: themeVars.color.white,
-  marginBottom: '-0.4rem',
+  marginBottom: '-0.2rem',
+  opacity: 0.8,
 });
 
 export const cloverNumber = style({
@@ -104,14 +74,13 @@ export const cloverNumber = style({
 });
 
 export const contentContainer = style({
-  position: 'absolute',
-  bottom: '15.87rem',
   zIndex: 2,
   display: 'flex',
   flexDirection: 'column',
   gap: '3.2rem',
   width: '100%',
   maxWidth: '33.5rem',
+  marginTop: '2rem',
 });
 
 export const titleContainer = style({
@@ -133,6 +102,5 @@ export const description = style({
 export const buttonContainer = style({
   display: 'flex',
   flexDirection: 'column',
-
   gap: '0.8rem',
 });

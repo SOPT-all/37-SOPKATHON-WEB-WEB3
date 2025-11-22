@@ -9,16 +9,16 @@
 </div>
 
 <h2> ✨ (서비스) 주요 기능 </h2>
+<img width="1920" height="1080" alt="img1" src="https://github.com/user-attachments/assets/4d286abc-ca6c-4697-98d8-c0af37d69531" />
+<img width="1920" height="1080" alt="img2" src="https://github.com/user-attachments/assets/eed47696-6ce3-4b29-ba39-89d1ead13942" />
 
 <h3> 1️⃣ 메인 페이지 세잎 클로버 UI </h3>
-<img src="" alt="메인 페이지 세잎 클로버 UI" />
 <div>
   세잎 클로버 UI를 통해 사용자가 지나칠 수 있는 일상을 ‘행복의 순간’으로 전환한다는 서비스를 시각적으로 전달합니다.<br/>
   감정 키워드(용기, 소망, 사랑)에 해당하는 기록 개수를 직관적으로 확인할 수 있어 나의 하루 감정 상태를 한눈에 파악할 수 있습니다.
 </div>
 
 <h3> 2️⃣ 일상 기록 </h3>
-<img src="" alt="일상 기록 기능" />
 <div>
   사용자는 하루 동안의 육아 에피소드를 간단하게 기록할 수 있습니다.<br/>
   한두 줄만으로도 충분히 기록을 완성할 수 있어 부담 없이 빠르게 감정을 남길 수 있습니다.<br/>
@@ -26,7 +26,6 @@
 </div>
 
 <h3> 3️⃣ 설화 변환 </h3>
-<img src="" alt="설화 변환 기능" />
 <div>
   사용자가 입력한 짧은 기록을 아일랜드식 구전 설화로 재해석해 특별한 이야기로 변환합니다.<br/>
   변환된 설화를 통해 평범한 하루가 가족만의 독특한 이야기로 남게 됩니다.<br/>
@@ -34,7 +33,6 @@
 </div>
 
 <h3> 4️⃣ 기록 아카이브 </h3>
-<img src="" alt="기록 아카이브 기능" />
 <div>
   사용자가 작성한 원본 기록과 변환된 설화를 모두 저장해 아카이빙합니다.<br/>
   감정 키워드(용기, 소망, 사랑)에 따라 기록을 필터링하여 원하는 이야기를 쉽게 찾을 수 있습니다.
@@ -108,7 +106,6 @@
 | 카테고리 | 기술 스택 |
 | :--- | :--- |
 | **UI Library** | ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black&style=for-the-badge) |
-| **State Management** | ![Zustand](https://img.shields.io/badge/Zustand-5C6078?logo=zustand&logoColor=white&style=for-the-badge) |
 | **Language** | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge) |
 | **Build Tool** | ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white&style=for-the-badge) |
 | **Styling** | ![Vanilla Extract](https://img.shields.io/badge/Vanilla%20Extract-FF69B4?logo=vanillaextract&logoColor=white&style=for-the-badge) |
@@ -151,13 +148,103 @@
 
 ```
 📦 src/
-├── 🗂️ apis/           # 백엔드 API 통신 로직
-├── 🗂️ assets/         # 정적 파일 폴더
-├── 🗂️ pages/          # 개별 페이지 컴포넌트들을 담는 폴더
-├── 🗂️ router/         # 라우팅 관련 설정 파일
-├── 🗂️ shared/         # 전역적으로 재사용되는 공통 요소
-├── 🗂️ styles/         # 전역 스타일 설정 파일
-├── 🗂️ types/          # 전역 타입 정의 (TypeScript 파일)
+├── 📁 apis/ # 백엔드 API 통신 로직
+│ ├── archive.api.ts
+│ └── instance.ts
+│
+├── 📁 assets/ # 정적 파일 폴더
+│ └── react.svg
+│
+├── 📁 pages/ # 개별 페이지 컴포넌트들을 담는 폴더
+│ ├── archive/ # 아카이브 페이지
+│ │ ├── ArchivePage.tsx
+│ │ ├── archive.css.ts
+│ │ ├── constants.ts
+│ │ └── components/
+│ │ ├── Card.tsx
+│ │ ├── card.css.ts
+│ │ ├── DiaryList.tsx
+│ │ └── FilterChips.tsx
+│ │
+│ ├── main/ # 메인 페이지
+│ │ ├── MainPage.tsx
+│ │ ├── MainPage.css.ts
+│ │ └── components/
+│ │
+│ ├── post/ # 게시글 작성 페이지
+│ │ ├── PostPage.tsx
+│ │ ├── PostPage.css.ts
+│ │ └── components/
+│ │ ├── TitleInput.tsx
+│ │ ├── TItleInput.css.ts
+│ │ ├── ContentInput.tsx
+│ │ └── ContentInput.css.ts
+│ │
+│ └── results/ # 결과 페이지
+│ ├── ResultPage.tsx
+│ ├── ResultPage.css.ts
+│ └── components/
+│ ├── Tab.tsx
+│ ├── Tab.css.ts
+│ ├── ResultTitle.tsx
+│ ├── ResultTitle.css.ts
+│ ├── ResultContent.tsx
+│ └── ResultContent.css.ts
+│
+├── 📁 router/ # 라우팅 관련 설정 파일
+│ ├── router.tsx
+│ ├── Layout.tsx
+│ ├── Layout.css.ts
+│ └── constant/
+│ └── routes.ts
+│
+├── 📁 shared/ # 전역적으로 재사용되는 공통 요소
+│ ├── assets/ # 공통 에셋
+│ │ ├── components/ # SVG 컴포넌트
+│ │ ├── image/
+│ │ ├── lottie/
+│ │ └── svg/
+│ │
+│ ├── components/ # 공통 컴포넌트
+│ │ ├── button/
+│ │ ├── chip/
+│ │ ├── header/
+│ │ ├── input/
+│ │ ├── label/
+│ │ ├── global-loading-screen/
+│ │ └── lottie-animation/
+│ │
+│ ├── hooks/ # 공통 훅
+│ │ └── archive/
+│ │
+│ └── utils/ # 공통 유틸 함수
+│ └── formatDate.ts
+│
+├── 📁 styles/ # 전역 스타일 설정 파일
+│ ├── global.css.ts
+│ ├── reset.css.ts
+│ ├── theme.css.ts
+│ ├── theme-provider.tsx
+│ └── tokens/
+│ ├── color.css.ts
+│ ├── font-style.ts
+│ └── typography.ts
+│
+├── 📁 types/ # 전역 타입 정의 (TypeScript 파일)
+│ ├── api.ts
+│ ├── archive.ts
+│ ├── button.ts
+│ ├── chip.ts
+│ ├── input.ts
+│ ├── result.ts
+│ └── variants.ts
+│
+├── 📁 constants/ # 상수 정의
+├── 📁 hooks/ # 전역 훅
+├── 📁 utils/ # 전역 유틸
+├── App.tsx
+├── main.tsx
+└── vite-env.d.ts
 ```
 
 <br/>
@@ -178,5 +265,6 @@
 <a href='https://postimg.cc/YjNh2dMQ' target='_blank'><img src='https://i.postimg.cc/y6t9PGGp/Kakao-Talk-Photo-2025-11-22-22-09-28.jpg' border='0' alt='Kakao-Talk-Photo-2025-11-22-22-09-28'></a>
  
 <h3>After</h3>
-<img src="" alt="웨비 팀원들 사진 (after)"/>
+<img width="532" height="557" alt="image" src="https://github.com/user-attachments/assets/f2f51d9d-4b88-4c0e-92f5-46a11fd99273" />
+
 
