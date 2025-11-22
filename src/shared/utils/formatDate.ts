@@ -1,4 +1,6 @@
-export const formatDateTime = (date: Date = new Date()) => {
+export const formatDateTime = (timestamp: string | undefined) => {
+  if (timestamp === undefined) return;
+  const date = new Date(timestamp);
   const y = date.getFullYear();
   const m = String(date.getMonth() + 1).padStart(2, '0');
   const d = String(date.getDate()).padStart(2, '0');
