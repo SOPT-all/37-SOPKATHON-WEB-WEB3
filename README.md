@@ -29,22 +29,22 @@
             </a>
         </td>
       <td style="min-width: 150px;">
-            <a href="">
-              <img src="" width="200" alt="깃허브계정-프로필사진">
+            <a href="https://github.com/jyeon03">
+              <img src="https://avatars.githubusercontent.com/u/147830921?v=4" width="200" alt="백지연-프로필사진">
               <br />
               <b>@jyeon03</b>
             </a>
         </td>
       <td style="min-width: 150px;">
-            <a href="">
-              <img src="" width="200" alt="깃허브계정-프로필사진">
+            <a href="https://github.com/sonnnnhe">
+              <img src="https://avatars.githubusercontent.com/u/147504410?v=4" width="200" alt="손하은-프로필사진">
               <br />
               <b>@sonnnnhe</b>
             </a>
         </td>
         <td style="min-width: 150px;">
-            <a href="">
-              <img src="" width="200" alt="깃허브계정-프로필사진">
+            <a href="https://github.com/twossu">
+              <img src="https://github.com/account" width="200" alt="최윤하-프로필사진">
               <br />
               <b>@twossu</b>
             </a>
