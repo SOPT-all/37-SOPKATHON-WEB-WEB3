@@ -8,12 +8,12 @@ import PostPage from '@/pages/post/PostPage';
 
 const router = createBrowserRouter([
   {
+    path: ROUTES.HOME,
+    element: <MainPage />,
+  },
+  {
     element: <Layout />,
     children: [
-      {
-        path: ROUTES.HOME,
-        element: <MainPage />,
-      },
       {
         path: ROUTES.ARCHIVE,
         element: <ArchivePage />,
