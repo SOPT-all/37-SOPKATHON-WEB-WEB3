@@ -1,4 +1,4 @@
-import { colors } from '@/styles/tokens/color.css';
+import { themeVars } from '@/styles/theme.css';
 import { style } from '@vanilla-extract/css';
 
 export const baseButtonStyle = {
@@ -14,21 +14,21 @@ export const baseButtonStyle = {
   selectors: {
     '&:disabled': {
       cursor: 'not-allowed',
-      backgroundColor: '#EBEDF0',
-      color: '#ABACAF',
+      backgroundColor: themeVars.color.lightgray200,
+      color: themeVars.color.lightgray500,
     },
   },
 };
 
 export const buttonStyleOutline = style({
   ...baseButtonStyle,
-  backgroundColor: '#26AD59',
-  color: colors.white,
+  backgroundColor: themeVars.color.green500,
+  color: themeVars.color.white,
 });
 
 export const buttonStyleFilled = style({
   ...baseButtonStyle,
-  backgroundColor: colors.white,
-  color: '#26AD59',
-  border: `0.2rem solid #26AD59`,
+  backgroundColor: themeVars.color.white,
+  color: themeVars.color.green500,
+  border: `0.2rem solid ${themeVars.color.green500}`,
 });
