@@ -1,6 +1,10 @@
 import { typography } from './typography';
 
 export const fontStyles = {
+  head_b_40: {
+    fontSize: typography.fontSize[40],
+    lineHeight: typography.lineHeight[130],
+  },
   head_b_24: {
     fontSize: typography.fontSize[24],
     lineHeight: typography.lineHeight[100],
@@ -67,6 +71,10 @@ export const fontStyles = {
     fontSize: typography.fontSize[12],
     lineHeight: typography.lineHeight[100],
     letterSpacing: typography.letterSpacing[1],
+  },
+  caption1_b_12: {
+    fontSize: typography.fontSize[12],
+    lineHeight: typography.lineHeight[100],
   },
   caption2_m_12: {
     fontSize: typography.fontSize[12],
