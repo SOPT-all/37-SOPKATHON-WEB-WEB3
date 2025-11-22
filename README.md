@@ -25,33 +25,43 @@
             <a href="">
               <img src="" width="200" alt="깃허브계정-프로필사진">
               <br />
-              <b>(깃허브계정명)</b>
+              <b>@huniversal</b>
             </a>
         </td>
       <td style="min-width: 150px;">
             <a href="">
               <img src="" width="200" alt="깃허브계정-프로필사진">
               <br />
-              <b>(깃허브계정명)</b>
+              <b>@jyeon03</b>
             </a>
         </td>
       <td style="min-width: 150px;">
             <a href="">
               <img src="" width="200" alt="깃허브계정-프로필사진">
               <br />
-              <b>(깃허브계정명)</b>
+              <b>@sonnnnhe</b>
+            </a>
+        </td>
+        <td style="min-width: 150px;">
+            <a href="">
+              <img src="" width="200" alt="깃허브계정-프로필사진">
+              <br />
+              <b>@twossu</b>
             </a>
         </td>
     </tr>
     <tr align="center">
        <td>
-            (이름) <br/>
+            이훈진 <br/>
       </td>
        <td>
-            (이름) <br/>
+            백지연 <br/>
       </td>
        <td>
-            (이름) <br/>
+            손하은 <br/>
+      </td>
+        <td>
+            최윤하 <br/>
       </td>
     </tr>
   	<tr align="center">
@@ -120,7 +130,7 @@
 <div><strong>규칙 1</strong> 화는 금물, 화가 날것같으면 용용체!~🐉 <br/></div>
 <div><strong>규칙 2</strong> 언제나 질문은 환영~ <br/></div>
 <div><strong>규칙 3</strong> 코드충돌 잘 해결하기!!(그냥 충돌을 내지 않도록 노력 아자스~)  <br/></div>
-<div><strong>규칙 4</strong> 쉬는 시간은 알아서, 할 것도 알아서  <br/></div>
+<div><strong>규칙 4</strong> 범인 색출 🚫금지🚫  <br/></div>
 <div><strong>규칙 5</strong> fun커톤이 되도록☘️ <br/></div>
 
 <br/>
