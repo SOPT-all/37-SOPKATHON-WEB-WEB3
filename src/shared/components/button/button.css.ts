@@ -1,23 +1,34 @@
 import { colors } from '@/styles/tokens/color.css';
 import { style } from '@vanilla-extract/css';
 
-export const buttonStyle = style({
-  backgroundColor: colors.gray400,
+export const baseButtonStyle = {
   border: 'none',
-  color: colors.black,
-  padding: '1rem 2rem',
-  borderRadius: '0.8rem',
   cursor: 'pointer',
+  width: '33.5rem',
+  height: '5.4rem',
+  borderRadius: '0.8rem',
+  fontSize: '1.8rem',
+  fontWeight: '600',
+  textAlign: 'center' as const,
 
   selectors: {
     '&:disabled': {
-      backgroundColor: colors.gray200,
-      color: colors.gray400,
       cursor: 'not-allowed',
-    },
-    '&:hover:not(:disabled)': {
-      backgroundColor: colors.gray700,
-      color: colors.white,
+      backgroundColor: '#EBEDF0',
+      color: '#ABACAF',
     },
   },
+};
+
+export const buttonStyleOutline = style({
+  ...baseButtonStyle,
+  backgroundColor: '#26AD59',
+  color: colors.white,
+});
+
+export const buttonStyleFilled = style({
+  ...baseButtonStyle,
+  backgroundColor: colors.white,
+  color: '#26AD59',
+  border: `0.2rem solid #26AD59`,
 });
