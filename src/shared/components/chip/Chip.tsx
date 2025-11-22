@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import type { ChipProps } from '@/types/chip';
-import { chipStyleActive, chipStyleInactive } from './chip.css';
+import {
+  chipStyleActive,
+  chipStyleInactive,
+  chipStyleAllActive,
+  chipStyleAllInactive,
+} from './chip.css';
 import FaithActive from '@/shared/assets/svg/faith-active.svg?react';
 import FaithInactive from '@/shared/assets/svg/faith-inactive.svg?react';
 import HopeActive from '@/shared/assets/svg/hope-active.svg?react';
@@ -12,6 +17,7 @@ const variantLabels = {
   faith: '용기',
   hope: '소망',
   love: '사랑',
+  all: '전체',
 };
 
 const iconSize = 24;
@@ -30,6 +36,9 @@ const Chip = ({
   const chipStatus = isControlled ? controlledChipStatus : internalChipStatus;
 
   const getIcon = () => {
+    if (variant === 'all') {
+      return null;
+    }
     if (variant === 'faith') {
       return chipStatus === 'active' ? (
         <FaithActive width={iconSize} height={iconSize} />
@@ -52,7 +61,13 @@ const Chip = ({
   };
 
   const chipStyle =
-    chipStatus === 'active' ? chipStyleActive : chipStyleInactive;
+    variant === 'all'
+      ? chipStatus === 'active'
+        ? chipStyleAllActive
+        : chipStyleAllInactive
+      : chipStatus === 'active'
+        ? chipStyleActive
+        : chipStyleInactive;
 
   const onClickHandler = () => {
     if (!isControlled) {

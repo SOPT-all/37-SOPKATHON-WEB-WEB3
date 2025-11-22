@@ -6,7 +6,6 @@ const baseChipStyle = {
   gap: '0.4rem',
   alignItems: 'center',
   justifyContent: 'center',
-  width: '8.4rem',
   height: '3.6rem',
   borderRadius: '0.8rem',
   fontSize: '1.6rem',
@@ -16,12 +15,29 @@ const baseChipStyle = {
 
 export const chipStyleActive = style({
   ...baseChipStyle,
+  width: '8.4rem',
   backgroundColor: themeVars.color.green600,
   color: themeVars.color.white,
 });
 
 export const chipStyleInactive = style({
   ...baseChipStyle,
+  width: '8.4rem',
+  backgroundColor: themeVars.color.white,
+  color: themeVars.color.green600,
+  border: `0.15rem solid ${themeVars.color.green600}`,
+});
+
+export const chipStyleAllActive = style({
+  ...baseChipStyle,
+  width: '6rem',
+  backgroundColor: themeVars.color.green600,
+  color: themeVars.color.white,
+});
+
+export const chipStyleAllInactive = style({
+  ...baseChipStyle,
+  width: '6rem',
   backgroundColor: themeVars.color.white,
   color: themeVars.color.green600,
   border: `0.15rem solid ${themeVars.color.green600}`,

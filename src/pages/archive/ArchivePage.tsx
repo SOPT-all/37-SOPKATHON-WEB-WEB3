@@ -11,33 +11,39 @@ import {
   lineStyle,
 } from './archive.css';
 
-type FilterType = 'faith' | 'hope' | 'love' | null;
+type FilterType = 'faith' | 'hope' | 'love' | 'all';
 
 const filterLabels = {
   faith: '용기',
   hope: '소망',
   love: '사랑',
-  null: '전체',
+  all: '전체',
 };
 
 const ArchivePage = () => {
-  const [selectedFilter, setSelectedFilter] = useState<FilterType>(null);
+  const [selectedFilter, setSelectedFilter] = useState<FilterType>('all');
 
   const filteredDiaries =
-    selectedFilter === null
+    selectedFilter === 'all'
       ? mockDiaries
       : mockDiaries.filter(diary => diary.leafType === selectedFilter);
 
   const filteredCount = filteredDiaries.length;
-  const filterLabel = filterLabels[selectedFilter ?? 'null'];
+  const filterLabel = filterLabels[selectedFilter];
 
-  const handleFilterClick = (filter: 'faith' | 'hope' | 'love') => {
-    setSelectedFilter(prev => (prev === filter ? null : filter));
+  const handleFilterClick = (filter: FilterType) => {
+    setSelectedFilter(filter);
   };
 
   return (
     <div className={archiveStyle}>
       <div className={archiveHeaderStyle}>
+        <Chip
+          variant='all'
+          type='button'
+          chipStatus={selectedFilter === 'all' ? 'active' : 'inactive'}
+          onClick={() => handleFilterClick('all')}
+        />
         <Chip
           variant='faith'
           type='button'
