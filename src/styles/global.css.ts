@@ -11,3 +11,7 @@ globalStyle('html, body, #root', {
   padding: 0,
   overflow: 'hidden',
 });
+
+globalStyle('*', {
+  boxSizing: 'border-box',
+});
