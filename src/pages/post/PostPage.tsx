@@ -1,16 +1,40 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '@/router/constant/routes';
 import TitleInput from './components/TitleInput';
 import ContentInput from './components/ContentInput';
 import Button from '@/shared/components/button/Button';
 import Chip from '@/shared/components/chip/Chip';
 import * as styles from './PostPage.css';
 
+// theme 매핑 함수
+const chipToTheme = (chip: 'faith' | 'hope' | 'love' | null): string => {
+  const themeMap = {
+    faith: 'FAITH',
+    hope: 'HOPE',
+    love: 'LOVE',
+  };
+  return chip ? themeMap[chip] : 'FAITH';
+};
+
 const PostPage = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [selectedChip, setSelectedChip] = useState<'faith' | 'hope' | 'love' | null>(null);
+  const navigate = useNavigate();
 
   const isFormValid = title.trim().length > 0 && content.trim().length > 0;
+
+  const handleSubmit = () => {
+    const postData = {
+      title: title.trim(),
+      createdAt: new Date().toISOString(),
+      theme: chipToTheme(selectedChip),
+      content: content.trim(),
+    };
+    console.log('전달할 데이터:', postData);
+    navigate(ROUTES.RESULTS, { state: postData });
+  };
 
   return (
     <div className={styles.container}>
@@ -54,9 +78,7 @@ const PostPage = () => {
         type="button"
         disabled={!isFormValid}
         className={styles.submitButton}
-        onClick={() => {
-          // TODO: 게시글 저장 로직
-        }}
+        onClick={handleSubmit}
       >
         아일랜드 설화로 만들기
       </Button>
