@@ -32,7 +32,11 @@ const MainPage = () => {
           >
             세잎에 새로운 기억 더하기
           </Button>
-          <Button variant='filled' type='button'>
+          <Button
+            variant='filled'
+            type='button'
+            onClick={() => navigate(ROUTES.ARCHIVE)}
+          >
             세잎 모아보기
           </Button>
         </div>
