@@ -10,6 +10,7 @@ import {
 } from './archive.css';
 import { filterLabels, type FilterType } from './constants';
 import type { Diary } from '@/types/archive';
+import GlobalLoadingScreen from '@/shared/components/global-loading-screen/global-loading-screen';
 
 const ArchivePage = () => {
   const [selectedFilter, setSelectedFilter] = useState<FilterType>('all');
@@ -25,6 +26,7 @@ const ArchivePage = () => {
   );
 
   const diaries: Diary[] = data?.pages.flatMap(page => page.diaries) ?? [];
+  const totalCount = data?.pages[0]?.totalCount ?? diaries.length;
 
   return (
     <div className={archiveStyle}>
@@ -36,10 +38,10 @@ const ArchivePage = () => {
         <p className={archiveHeaderTitleStyle}>
           {filterLabels[selectedFilter]}
         </p>
-        <p className={archiveHeaderTitleStyle}>{diaries.length}개의 결과</p>
+        <p className={archiveHeaderTitleStyle}>{totalCount}개의 결과</p>
       </div>
       {isLoading ? (
-        <div>로딩 중...</div>
+        <GlobalLoadingScreen text='로딩 중' />
       ) : (
         <DiaryList
           diaries={diaries}

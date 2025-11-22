@@ -16,7 +16,7 @@ const ResultContent = ({
   isLoading,
 }: ResultContentProps) => {
   if (click === 'tale' && isLoading) {
-    return <GlobalLoadingScreen />;
+    return <GlobalLoadingScreen text='설화를 만드는 중이에요' />;
   }
   return (
     <div className={content}>
