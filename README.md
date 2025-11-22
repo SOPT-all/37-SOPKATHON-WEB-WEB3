@@ -22,36 +22,46 @@
 <table align="center">
     <tr align="center">
       <td style="min-width: 150px;">
-            <a href="">
-              <img src="" width="200" alt="깃허브계정-프로필사진">
+            <a href="https://github.com/huniversal">
+              <img src="https://avatars.githubusercontent.com/u/116941516?v=4" width="200" alt="이훈진-프로필사진">
               <br />
-              <b>(깃허브계정명)</b>
+              <b>@huniversal</b>
             </a>
         </td>
       <td style="min-width: 150px;">
-            <a href="">
-              <img src="" width="200" alt="깃허브계정-프로필사진">
+            <a href="https://github.com/jyeon03">
+              <img src="https://avatars.githubusercontent.com/u/147830921?v=4" width="200" alt="백지연-프로필사진">
               <br />
-              <b>(깃허브계정명)</b>
+              <b>@jyeon03</b>
             </a>
         </td>
       <td style="min-width: 150px;">
-            <a href="">
-              <img src="" width="200" alt="깃허브계정-프로필사진">
+            <a href="https://github.com/sonnnnhe">
+              <img src="https://avatars.githubusercontent.com/u/147504410?v=4" width="200" alt="손하은-프로필사진">
               <br />
-              <b>(깃허브계정명)</b>
+              <b>@sonnnnhe</b>
+            </a>
+        </td>
+        <td style="min-width: 150px;">
+            <a href="https://github.com/twossu">
+              <img src="https://github.com/account" width="200" alt="최윤하-프로필사진">
+              <br />
+              <b>@twossu</b>
             </a>
         </td>
     </tr>
     <tr align="center">
        <td>
-            (이름) <br/>
+            이훈진 <br/>
       </td>
        <td>
-            (이름) <br/>
+            백지연 <br/>
       </td>
        <td>
-            (이름) <br/>
+            손하은 <br/>
+      </td>
+        <td>
+            최윤하 <br/>
       </td>
     </tr>
   	<tr align="center">
@@ -64,14 +74,23 @@
        <td>
             (역할분담) <br/>
       </td>
+        <td>
+            (역할분담) <br/>
+      </td>
     </tr>
 </table>
 
 <h2> 🛠 기술스택 </h2>
 
-```
-- React
-```
+| 카테고리 | 기술 스택 |
+| :--- | :--- |
+| **UI Library** | ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black&style=for-the-badge) |
+| **State Management** | ![Zustand](https://img.shields.io/badge/Zustand-5C6078?logo=zustand&logoColor=white&style=for-the-badge) |
+| **Language** | ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge) |
+| **Build Tool** | ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white&style=for-the-badge) |
+| **Styling** | ![Vanilla Extract](https://img.shields.io/badge/Vanilla%20Extract-FF69B4?logo=vanillaextract&logoColor=white&style=for-the-badge) |
+| **Package Manager** | ![Pnpm](https://img.shields.io/badge/Pnpm-F69220?logo=pnpm&logoColor=white&style=for-the-badge) |
+| **CI/CD** | ![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white&style=for-the-badge) |
 
 <br/>
 
@@ -120,7 +139,7 @@
 <div><strong>규칙 1</strong> 화는 금물, 화가 날것같으면 용용체!~🐉 <br/></div>
 <div><strong>규칙 2</strong> 언제나 질문은 환영~ <br/></div>
 <div><strong>규칙 3</strong> 코드충돌 잘 해결하기!!(그냥 충돌을 내지 않도록 노력 아자스~)  <br/></div>
-<div><strong>규칙 4</strong> 쉬는 시간은 알아서, 할 것도 알아서  <br/></div>
+<div><strong>규칙 4</strong> 범인 색출 🚫금지🚫  <br/></div>
 <div><strong>규칙 5</strong> fun커톤이 되도록☘️ <br/></div>
 
 <br/>
