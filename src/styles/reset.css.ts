@@ -85,3 +85,7 @@ globalStyle('a', {
 globalStyle("input[type='checkbox'], input[type='radio']", {
   cursor: 'pointer',
 });
+
+globalStyle('button', {
+  border: 'none',
+});
