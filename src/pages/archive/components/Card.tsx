@@ -1,17 +1,12 @@
 import Label from '@/shared/components/label/Label';
 import { cardCreatedAtStyle, cardStyle, cardTitleStyle } from './card.css';
 import { formatDateTime } from '@/shared/utils/formatDate';
-
-interface CardProps {
-  label: 'faith' | 'hope' | 'love';
-  title: string;
-  createdAt: Date;
-}
+import type { CardProps } from '@/types/archive';
 
 const Card = ({ label, title, createdAt }: CardProps) => {
   const labelName = {
     faith: '용기',
-    hope: '희망',
+    hope: '소망',
     love: '사랑',
   };
 
