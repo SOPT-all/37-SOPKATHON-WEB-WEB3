@@ -1,8 +1,10 @@
-import { style } from "@vanilla-extract/css";
+import { themeVars } from "@/styles/theme.css";
+import { style, styleVariants } from "@vanilla-extract/css";
 
 export const headerStyle = style({
   display: "flex",
   alignItems: "center",
+  justifyContent: "space-between",
   padding: "0.75rem",
   backgroundColor: "white",
   minHeight: "3rem",
@@ -18,3 +20,10 @@ export const backButtonStyle = style({
   fontFamily: "inherit",
 });
 
+export const checkButtonStyle = style({
+  ...themeVars.fontStyles.body_sb_16,
+  color: themeVars.color.green500,
+  backgroundColor: "transparent",
+  cursor: "pointer",
+  marginLeft: "auto",
+});
