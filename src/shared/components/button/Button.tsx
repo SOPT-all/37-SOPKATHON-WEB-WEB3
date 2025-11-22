@@ -1,19 +1,25 @@
 import type { ButtonProps } from '@/types/button';
-import { buttonStyle } from './button.css';
+import { buttonStyleOutline, buttonStyleFilled } from './button.css';
 
 const Button = ({
   children,
+  variant,
+  type,
   disabled,
   onClick,
-  type,
   className,
 }: ButtonProps) => {
+  const buttonClassName =
+    variant === 'outline' ? buttonStyleOutline : buttonStyleFilled;
+
   return (
     <button
-      className={className ? `${buttonStyle} ${className}` : buttonStyle}
+      className={
+        className ? `${buttonClassName} ${className}` : buttonClassName
+      }
       disabled={disabled}
-      onClick={onClick}
       type={type}
+      onClick={onClick}
     >
       {children}
     </button>

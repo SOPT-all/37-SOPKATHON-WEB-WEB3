@@ -2,8 +2,9 @@ import type { ReactNode } from 'react';
 
 export interface ButtonProps {
   children: ReactNode;
+  variant: 'outline' | 'filled';
+  type: 'button' | 'submit';
   disabled?: boolean;
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
   className?: string;
 }
