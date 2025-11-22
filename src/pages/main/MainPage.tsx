@@ -1,7 +1,5 @@
-import * as styles from './MainPage.css';
-
 const MainPage = () => {
-  return <div className={styles.title}>dkdkdk</div>;
+  return <div></div>;
 };
 
 export default MainPage;
