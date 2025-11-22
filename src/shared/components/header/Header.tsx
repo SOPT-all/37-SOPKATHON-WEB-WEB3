@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { ROUTES } from "@/router/constant/routes";
-import { headerStyle, backButtonStyle } from "./Header.css";
+import * as styles from "./Header.css";
 import { IconArrowLeft } from "@/shared/assets/components";
 
 const Header = () => {
@@ -10,15 +10,29 @@ const Header = () => {
   const shouldShowBackButton =
     location.pathname === ROUTES.POST || location.pathname === ROUTES.ARCHIVE;
 
+  const shouldShowCheckButton =
+    location.pathname === ROUTES.RESULTS;
+
   const handleBackClick = () => {
     navigate(-1);
   };
 
+  const handleCheckClick = () => {
+    navigate(ROUTES.HOME);
+  };
+
   return (
-    <header className={headerStyle}>
-      {shouldShowBackButton && (
-        <button className={backButtonStyle} onClick={handleBackClick}>
+    <header className={styles.headerStyle}>
+      {shouldShowBackButton ? (
+        <button className={styles.backButtonStyle} onClick={handleBackClick}>
           <IconArrowLeft width="2.4rem" height="2.4rem" />
+        </button>
+      ) : (
+        <div></div>
+      )}
+      {shouldShowCheckButton && (
+        <button className={styles.checkButtonStyle} onClick={handleCheckClick}>
+          확인
         </button>
       )}
     </header>
