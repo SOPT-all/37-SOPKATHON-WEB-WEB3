@@ -1,73 +1,133 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2> (서비스이름) </h2>
 
-Currently, two official plugins are available:
+<img src=""  alt="서비스대표-이미지" />
+<p>(서비스 소개)</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## React Compiler
+<h2> ✨ (서비스) 주요 기능 </h2>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<h3> 1️⃣ (기능 1) </h3>
+<img src=""  alt="기능1-대표이미지" />
+<div ><strong> (강조단어) </strong> (기능설명)  <br/></div>
 
-## Expanding the ESLint configuration
+<h3> 2️⃣ (기능 2) </h3>
+<img src=""  alt="기능1-대표이미지" />
+<div ><strong> (강조단어) </strong> (기능설명)  <br/></div>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<h2> 👥 Team </h2>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<table align="center">
+    <tr align="center">
+      <td style="min-width: 150px;">
+            <a href="">
+              <img src="" width="200" alt="깃허브계정-프로필사진">
+              <br />
+              <b>(깃허브계정명)</b>
+            </a>
+        </td>
+      <td style="min-width: 150px;">
+            <a href="">
+              <img src="" width="200" alt="깃허브계정-프로필사진">
+              <br />
+              <b>(깃허브계정명)</b>
+            </a>
+        </td>
+      <td style="min-width: 150px;">
+            <a href="">
+              <img src="" width="200" alt="깃허브계정-프로필사진">
+              <br />
+              <b>(깃허브계정명)</b>
+            </a>
+        </td>
+    </tr>
+    <tr align="center">
+       <td>
+            (이름) <br/>
+      </td>
+       <td>
+            (이름) <br/>
+      </td>
+       <td>
+            (이름) <br/>
+      </td>
+    </tr>
+  	<tr align="center">
+       <td>
+            (역할분담) <br/>
+      </td>
+       <td>
+            (역할분담) <br/>
+      </td>
+       <td>
+            (역할분담) <br/>
+      </td>
+    </tr>
+</table>
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<h2> 🛠 기술스택 </h2>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+- React
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<br/>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+<h2>  📄 컨벤션 및 브랜치 전략 </h2>
+<!-- 노션 링크 또는 표로 작성 -->
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+<a href="" />
+
+<h3> 컨벤션 </h3>
+
+| 커밋 컨벤션 | 용도 |
+| ----------- | ---- |
+| feat        |      |
+|             |      |
+|             |      |
+|             |      |
+
+<h3> 브랜치 </h3>
+
+| 브랜치 | 용도 |
+| ------ | ---- |
+| main   |      |
+|        |      |
+|        |      |
+|        |      |
+
+<br/>
+
+<h2> 📁 프로젝트 구조 </h2>
+
 ```
+📦 src/          
+├── 🗂️ apis/
+├── 🗂️ assets/
+├── 🗂️ components/
+├── 🗂️ hooks/
+├── 🗂️ pages/
+├── 🗂️ styles/
+└── 🗂️ types/
+```
+
+<br/>
+
+<h2> 🫶 우리 조 그라운드 룰 </h2>
+
+<div><strong>규칙 1</strong> 화는 금물, 화가 날것같으면 용용체!~🐉 <br/></div>
+<div><strong>규칙 2</strong> 언제나 질문은 환영~ <br/></div>
+<div><strong>규칙 3</strong> 코드충돌 잘 해결하기!!(그냥 충돌을 내지 않도록 노력 아자스~)  <br/></div>
+<div><strong>규칙 4</strong> 쉬는 시간은 알아서, 할 것도 알아서  <br/></div>
+<div><strong>규칙 5</strong> fun커톤이 되도록☘️ <br/></div>
+
+<br/>
+
+<h2>웹계인팟 Before and After</h2>
+<h3>Before</h3>
+<img src="" alt="웨비 팀원들 사진 (before)"/>
+ 
+<h3>After</h3>
+<img src="" alt="웨비 팀원들 사진 (after)"/>
