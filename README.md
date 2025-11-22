@@ -44,7 +44,7 @@
         </td>
         <td style="min-width: 150px;">
             <a href="https://github.com/twossu">
-              <img src="https://github.com/account" width="200" alt="최윤하-프로필사진">
+              <img src="https://avatars.githubusercontent.com/u/201346724?v=4" width="200" alt="최윤하-프로필사진">
               <br />
               <b>@twossu</b>
             </a>
@@ -170,13 +170,15 @@
 <div><strong>규칙 2</strong> 언제나 질문은 환영~ <br/></div>
 <div><strong>규칙 3</strong> 코드충돌 잘 해결하기!!(그냥 충돌을 내지 않도록 노력 아자스~)  <br/></div>
 <div><strong>규칙 4</strong> 범인 색출 🚫금지🚫  <br/></div>
-<div><strong>규칙 5</strong> fun커톤이 되도록☘️ <br/></div>
+<div><strong>규칙 5</strong> 30분마다 스트레칭🏋️‍♀️ <br/></div>
+<div><strong>규칙 6</strong> fun커톤이 되도록☘️ <br/></div>
 
 <br/>
 
 <h2>웹계인팟 Before and After</h2>
 <h3>Before</h3>
-<img src="" alt="웨비 팀원들 사진 (before)"/>
+![KakaoTalk_Photo_2025-11-22-22-09-28](https://github.com/user-attachments/assets/08af2ef7-a94a-47f6-8ebd-f0dfe8c120f9)
  
 <h3>After</h3>
 <img src="" alt="웨비 팀원들 사진 (after)"/>
+
