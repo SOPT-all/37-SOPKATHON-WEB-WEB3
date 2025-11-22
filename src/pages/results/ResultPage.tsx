@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Header from '@/shared/components/header/Header';
 import * as s from './ResultPage.css';
 import Tab from './components/Tab';
@@ -25,10 +25,6 @@ const ResultPage = () => {
   const [click, setClick] = useState<TabMenu>('origin');
 
   const isViewMode = id !== undefined;
-
-  useEffect(() => {
-    console.log(location.state);
-  }, [location]);
 
   // get 요청
   const { data: viewData, isLoading: isViewLoading } = useQuery<ResultItem>({
