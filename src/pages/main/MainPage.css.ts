@@ -87,7 +87,6 @@ export const titleContainer = style({
   display: 'flex',
   gap: '0.8rem',
   flexDirection: 'column',
-  alignItems: 'center',
 });
 
 export const textLogo = style({
