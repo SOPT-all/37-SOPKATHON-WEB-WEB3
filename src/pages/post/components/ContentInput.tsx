@@ -3,7 +3,7 @@ import { container, textarea, counter } from './ContentInput.css';
 
 interface ContentInputProps {
   value: string;
-  onChange: (value: string) => void;
+  onChange: (_value: string) => void;
   placeholder: string;
   maxLength: number;
 }

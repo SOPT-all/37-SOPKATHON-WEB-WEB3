@@ -3,7 +3,7 @@ import { container, title, input } from './TItleInput.css';
 
 interface TitleInputPorps {
   value: string;
-  onChange: (value: string) => void;
+  onChange: (_value: string) => void;
   placeholder: string;
 }
 
