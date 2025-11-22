@@ -93,8 +93,8 @@ export const cloverTextRight = style({
 
 export const cloverLabel = style({
   ...themeVars.fontStyles.caption1_b_12,
-
   color: themeVars.color.white,
+  marginBottom: '-0.4rem',
 });
 
 export const cloverNumber = style({
