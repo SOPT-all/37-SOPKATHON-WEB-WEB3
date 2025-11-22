@@ -3,17 +3,14 @@
 import { style } from '@vanilla-extract/css';
 import { themeVars } from '@/styles/theme.css';
 export const loadingScreen = style({
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  width: '100vw',
-  height: '100vh',
+  width: '100%',
+  height: '150px',
   backgroundColor: '#FFFFFF',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  zIndex: 9999,
+  marginTop: 150,
 });
 
 export const loadingText = style({

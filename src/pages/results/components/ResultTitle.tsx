@@ -1,12 +1,18 @@
 import Label from '@/shared/components/label/Label';
 import * as s from './ResultTitle.css';
 
-const ResultTitle = () => {
+interface ResultTitleProps {
+  label: string;
+  title: string;
+  date: string;
+}
+
+const ResultTitle = ({ label, title, date }: ResultTitleProps) => {
   return (
     <div className={s.wrapper}>
-      <Label styleType='faith'>용기</Label>
-      <h1 className={s.title}>오늘경아와밤샌날</h1>
-      <span className={s.date}>2025.11.22 22:43</span>
+      <Label styleType='faith'>{label}</Label>
+      <h1 className={s.title}>{title}</h1>
+      <span className={s.date}>{date}</span>
     </div>
   );
 };
