@@ -1,32 +1,35 @@
-import { useQuery } from '@tanstack/react-query';
-import type { UseQueryResult } from '@tanstack/react-query';
+import { useQuery, type UseQueryResult } from '@tanstack/react-query';
 import apiClient from '@/apis/instance';
-import type { CloverCount, CloverCountResponse } from '@/types/api';
+import type { CloverCount } from '@/types/api';
 
 export const QUERY_KEYS = {
   cloverCount: 'cloverCount',
 };
 
-const fetchCloverCount = async (): Promise<CloverCount> => {
+type Res = {
+  userId: number;
+  faithCount: number;
+  hopeCount: number;
+  loveCount: number;
+};
+
+const fetchCloverCount = async (): Promise<Res> => {
   const FIXED_USER_ID = 1;
 
-  const response: any = await apiClient.get<CloverCountResponse>(
-    '/shamrock-count',
-    {
-      params: {
-        userId: FIXED_USER_ID,
-      },
-    }
-  );
+  const response = await apiClient.get<CloverCount>('/shamrock-count', {
+    params: {
+      userId: FIXED_USER_ID,
+    },
+  });
 
   console.log('API 전체 응답 확인:', response);
 
   const responseData = response?.data;
-  const serverData = responseData?.data;
+  // const serverData = responseData?.data;
 
-  if (serverData) {
-    return serverData;
-  }
+  // if (serverData) {
+  //   return serverData;
+  // }
 
   if (responseData && typeof responseData.faithCount === 'number') {
     return responseData;
@@ -40,7 +43,9 @@ export const useGetCloverCount = (): UseQueryResult<CloverCount, Error> => {
   return useQuery({
     queryKey: [QUERY_KEYS.cloverCount, 1],
     queryFn: fetchCloverCount,
-    staleTime: 1000 * 60 * 5,
+    staleTime: 0,
+    refetchOnMount: true,
+    refetchOnWindowFocus: true,
     retry: 1,
   });
 };
