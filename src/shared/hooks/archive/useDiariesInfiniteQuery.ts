@@ -1,6 +1,5 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
-import type { FilterType } from '../../../pages/archive/constants';
-import { leafTypeMap } from '../../../pages/archive/constants';
+import { leafTypeMap, type FilterType } from '../../../pages/archive/constants';
 import { getDiaries } from '@/apis/archive.api';
 import type { DiariesResponse } from '@/types/archive';
 

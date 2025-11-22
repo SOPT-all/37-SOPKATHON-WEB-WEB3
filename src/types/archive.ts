@@ -2,14 +2,14 @@ import type { FilterType } from '@/pages/archive/constants';
 
 export interface FilterChipsProps {
   selectedFilter: FilterType;
-  onFilterClick: (filter: FilterType) => void;
+  onFilterClick: (_filter: FilterType) => void;
 }
 
 export interface DiaryListProps {
   diaries: Diary[];
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
-  observerRef: (node: HTMLDivElement | null) => void;
+  observerRef: (_node: HTMLDivElement | null) => void;
 }
 
 export interface CardProps {
