@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import * as styles from './MainPage.css';
 import TextLogo from '@/shared/assets/components/TextLogo';
 import Button from '@/shared/components/button/Button';
@@ -5,8 +6,11 @@ import UnionLeft from '@/shared/assets/components/UnionLeft';
 import UnionRight from '@/shared/assets/components/UnionRight';
 import UnionTop from '@/shared/assets/components/UnionTop';
 import UnionBottom from '@/shared/assets/components/UnionBottom';
+import { ROUTES } from '@/router/constant/routes';
 
 const MainPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.backgroundContainer}>
       <UnionLeft className={styles.unionLeft} />
@@ -21,7 +25,11 @@ const MainPage = () => {
           </span>
         </div>
         <div className={styles.buttonContainer}>
-          <Button variant='outline' type='button'>
+          <Button
+            variant='outline'
+            type='button'
+            onClick={() => navigate(ROUTES.POST)}
+          >
             세잎에 새로운 기억 더하기
           </Button>
           <Button variant='filled' type='button'>
