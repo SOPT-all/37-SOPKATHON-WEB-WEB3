@@ -1,10 +1,18 @@
 import * as styles from './MainPage.css';
 import TextLogo from '@/shared/assets/components/TextLogo';
 import Button from '@/shared/components/button/Button';
+import UnionLeft from '@/shared/assets/components/UnionLeft';
+import UnionRight from '@/shared/assets/components/UnionRight';
+import UnionTop from '@/shared/assets/components/UnionTop';
+import UnionBottom from '@/shared/assets/components/UnionBottom';
 
 const MainPage = () => {
   return (
     <div className={styles.backgroundContainer}>
+      <UnionLeft className={styles.unionLeft} />
+      <UnionRight className={styles.unionRight} />
+      <UnionTop className={styles.unionTop} />
+      <UnionBottom className={styles.unionBottom} />
       <div className={styles.contentContainer}>
         <div className={styles.titleContainer}>
           <TextLogo className={styles.textLogo} />

@@ -2,6 +2,7 @@ import { style } from '@vanilla-extract/css';
 import { themeVars } from '@/styles/theme.css';
 
 export const backgroundContainer = style({
+  position: 'relative',
   width: '100%',
   height: '100%',
   minHeight: '100vh',
@@ -11,13 +12,57 @@ export const backgroundContainer = style({
   backgroundRepeat: 'no-repeat',
   display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center',
+});
+
+export const unionLeft = style({
+  position: 'absolute',
+  left: '50.6%',
+  top: '31.8%',
+  transform: 'translate(-50%, -50%) translateX(-7.35rem) translateY(0.7rem)',
+  width: '14.7rem',
+  height: '15.6rem',
+  zIndex: 1,
+});
+
+export const unionRight = style({
+  position: 'absolute',
+  left: '49.6%',
+  top: '31.8%',
+  transform: 'translate(-50%, -50%) translateX(7.35rem) translateY(0.7rem)',
+  width: '14.7rem',
+  height: '15.6rem',
+  zIndex: 1,
+});
+
+export const unionTop = style({
+  position: 'absolute',
+  top: '8.5rem',
+  width: '15.6rem',
+  height: '14.2rem',
+  zIndex: 1,
+});
+
+export const unionBottom = style({
+  position: 'absolute',
+  left: '42%',
+  top: '29%',
+  transform: 'translate(-50%, -50%) translateY(7.65rem)',
+  width: '7.9rem',
+  height: '15.3rem',
+  zIndex: 1,
 });
 
 export const contentContainer = style({
+  position: 'absolute',
+  bottom: '15.87rem',
+  zIndex: 2,
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'flex-start',
   gap: '3.2rem',
+  width: '100%',
+  maxWidth: '33.5rem',
+  padding: '0 2rem',
 });
 
 export const titleContainer = style({
