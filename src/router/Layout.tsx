@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <main className={mainStyle}>
       <Header />
-      <Suspense fallback={<GlobalLoadingScreen />}>
+      <Suspense fallback={<GlobalLoadingScreen text='로딩 중' />}>
         <Outlet />
       </Suspense>
     </main>
