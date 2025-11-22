@@ -17,6 +17,21 @@ const MainPage = () => {
       <UnionRight className={styles.unionRight} />
       <UnionTop className={styles.unionTop} />
       <UnionBottom className={styles.unionBottom} />
+
+      {/* 클로버 텍스트 */}
+      <div className={styles.cloverTextTop}>
+        <span className={styles.cloverLabel}>용기</span>
+        <span className={styles.cloverNumber}>22</span>
+      </div>
+      <div className={styles.cloverTextLeft}>
+        <span className={styles.cloverLabel}>소망</span>
+        <span className={styles.cloverNumber}>12</span>
+      </div>
+      <div className={styles.cloverTextRight}>
+        <span className={styles.cloverLabel}>사랑</span>
+        <span className={styles.cloverNumber}>17</span>
+      </div>
+
       <div className={styles.contentContainer}>
         <div className={styles.titleContainer}>
           <TextLogo className={styles.textLogo} />

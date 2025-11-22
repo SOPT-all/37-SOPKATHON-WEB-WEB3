@@ -6,6 +6,7 @@ export const typography = {
     18: '1.8rem',
     20: '2rem',
     24: '2.4rem',
+    40: '4rem',
   },
   lineHeight: {
     100: '100%',

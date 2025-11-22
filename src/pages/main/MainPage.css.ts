@@ -53,6 +53,56 @@ export const unionBottom = style({
   zIndex: 1,
 });
 
+// 클로버 텍스트 스타일
+export const cloverTextTop = style({
+  position: 'absolute',
+  top: '12.5rem',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  zIndex: 300,
+  pointerEvents: 'none',
+  opacity: '0.6',
+});
+
+export const cloverTextLeft = style({
+  position: 'absolute',
+  left: '50.6%',
+  top: '31.8%',
+  transform: 'translate(-50%, -50%) translateX(-7.35rem) translateY(0.7rem)',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  zIndex: 3,
+  pointerEvents: 'none',
+  opacity: '0.6',
+});
+
+export const cloverTextRight = style({
+  position: 'absolute',
+  left: '49.6%',
+  top: '31.8%',
+  transform: 'translate(-50%, -50%) translateX(7.35rem) translateY(0.7rem)',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  zIndex: 3,
+  pointerEvents: 'none',
+  opacity: '0.6',
+});
+
+export const cloverLabel = style({
+  ...themeVars.fontStyles.caption1_b_12,
+
+  color: themeVars.color.white,
+});
+
+export const cloverNumber = style({
+  ...themeVars.fontStyles.head_b_40,
+  fontWeight: '700',
+  color: themeVars.color.white,
+});
+
 export const contentContainer = style({
   position: 'absolute',
   bottom: '15.87rem',
