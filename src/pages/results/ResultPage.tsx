@@ -76,6 +76,7 @@ const ResultPage = () => {
 
   return (
     <div>
+      <Header />
       <Tab click={click} setClick={setClick} />
       <section className={s.section}>
         <ResultTitle
