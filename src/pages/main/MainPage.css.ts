@@ -112,7 +112,6 @@ export const contentContainer = style({
   gap: '3.2rem',
   width: '100%',
   maxWidth: '33.5rem',
-  padding: '0 2rem',
 });
 
 export const titleContainer = style({
@@ -134,5 +133,6 @@ export const description = style({
 export const buttonContainer = style({
   display: 'flex',
   flexDirection: 'column',
+
   gap: '0.8rem',
 });
