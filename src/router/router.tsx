@@ -1,10 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
+import React, { Suspense } from 'react';
 import Layout from '@/router/Layout';
 import { ROUTES } from '@/router/constant/routes';
+import GlobalLoadingScreen from '@/shared/components/global-loading-screen/global-loading-screen'; // 👈 로딩 컴포넌트 임포트
+
 import MainPage from '@/pages/main/MainPage';
 import ArchivePage from '@/pages/archive/ArchivePage';
-import ResultPage from '@/pages/results/ResultPage';
 import PostPage from '@/pages/post/PostPage';
+
+const LazyResultPage = React.lazy(() => import('@/pages/results/ResultPage'));
 
 const router = createBrowserRouter([
   {
@@ -20,7 +24,11 @@ const router = createBrowserRouter([
       },
       {
         path: ROUTES.RESULTS,
-        element: <ResultPage />,
+        element: (
+          <Suspense fallback={<GlobalLoadingScreen />}>
+            <LazyResultPage />
+          </Suspense>
+        ),
       },
       {
         path: ROUTES.POST,
