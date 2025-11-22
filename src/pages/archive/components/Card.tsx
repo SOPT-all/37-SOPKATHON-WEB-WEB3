@@ -8,7 +8,7 @@ interface CardProps {
   createdAt: Date;
 }
 
-const Card = ({ label, title, createdAt }: CardProps) => {  
+const Card = ({ label, title, createdAt }: CardProps) => {
   const labelName = {
     faith: '용기',
     hope: '희망',
