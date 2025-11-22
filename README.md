@@ -1,6 +1,6 @@
 <div align="center">
 
-<h2> (서비스이름) </h2>
+<h2> Shamrock Tales </h2>
 
 <img src=""  alt="서비스대표-이미지" />
 <p>(서비스 소개)</p>
