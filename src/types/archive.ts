@@ -29,6 +29,7 @@ export interface DiariesResponse {
   diaries: Diary[];
   nextCursor: number | null;
   hasNext: boolean;
+  totalCount?: number;
 }
 
 export interface GetDiariesParams {
