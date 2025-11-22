@@ -13,9 +13,12 @@
     "svg:convert": "svgr --out-dir src/shared/assets/components src/shared/assets/svg --typescript --jsx-runtime automatic --icon"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.90.10",
+    "@tanstack/react-query-devtools": "^5.91.0",
     "axios": "^1.13.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-error-boundary": "^6.0.0",
     "react-router-dom": "^7.9.6",
     "zustand": "^5.0.8"
   },
