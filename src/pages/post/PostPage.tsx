@@ -20,7 +20,9 @@ const chipToTheme = (chip: 'faith' | 'hope' | 'love' | null): string => {
 const PostPage = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [selectedChip, setSelectedChip] = useState<'faith' | 'hope' | 'love' | null>(null);
+  const [selectedChip, setSelectedChip] = useState<
+    'faith' | 'hope' | 'love' | null
+  >(null);
   const navigate = useNavigate();
 
   const isFormValid = title.trim().length > 0 && content.trim().length > 0;
@@ -32,7 +34,6 @@ const PostPage = () => {
       theme: chipToTheme(selectedChip),
       content: content.trim(),
     };
-    console.log('전달할 데이터:', postData);
     navigate(ROUTES.RESULTS, { state: postData });
   };
 
@@ -41,28 +42,34 @@ const PostPage = () => {
       <TitleInput
         value={title}
         onChange={setTitle}
-        placeholder="제목을 입력하세요"
+        placeholder='제목을 입력하세요'
       />
       <div className={styles.chipSection}>
         <h2 className={styles.title}>오늘의 마음을 담을 잎사귀를 고르세요</h2>
         <div className={styles.chipContainer}>
           <Chip
-            variant="faith"
-            type="button"
+            variant='faith'
+            type='button'
             chipStatus={selectedChip === 'faith' ? 'active' : 'inactive'}
-            onClick={() => setSelectedChip(selectedChip === 'faith' ? null : 'faith')}
+            onClick={() =>
+              setSelectedChip(selectedChip === 'faith' ? null : 'faith')
+            }
           />
           <Chip
-            variant="hope"
-            type="button"
+            variant='hope'
+            type='button'
             chipStatus={selectedChip === 'hope' ? 'active' : 'inactive'}
-            onClick={() => setSelectedChip(selectedChip === 'hope' ? null : 'hope')}
+            onClick={() =>
+              setSelectedChip(selectedChip === 'hope' ? null : 'hope')
+            }
           />
           <Chip
-            variant="love"
-            type="button"
+            variant='love'
+            type='button'
             chipStatus={selectedChip === 'love' ? 'active' : 'inactive'}
-            onClick={() => setSelectedChip(selectedChip === 'love' ? null : 'love')}
+            onClick={() =>
+              setSelectedChip(selectedChip === 'love' ? null : 'love')
+            }
           />
         </div>
       </div>
@@ -74,8 +81,8 @@ const PostPage = () => {
         maxLength={100}
       />
       <Button
-        variant="filled"
-        type="button"
+        variant='filled'
+        type='button'
         disabled={!isFormValid}
         className={styles.submitButton}
         onClick={handleSubmit}
