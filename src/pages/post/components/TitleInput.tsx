@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { container, title, input } from './TItleInput.css';
 
 interface TitleInputPorps {
@@ -7,8 +8,9 @@ interface TitleInputPorps {
 }
 
 const Input = ({ value, onChange, placeholder }: TitleInputPorps) => {
+  const [isFocused, setIsFocused] = useState(false);
   const hasValue = value.length > 0;
-  const inputClass = hasValue ? input.active : input.default;
+  const inputClass = isFocused && hasValue ? input.active : input.default;
 
   return (
     <div className={container}>
@@ -19,6 +21,8 @@ const Input = ({ value, onChange, placeholder }: TitleInputPorps) => {
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
       />
     </div>
   );

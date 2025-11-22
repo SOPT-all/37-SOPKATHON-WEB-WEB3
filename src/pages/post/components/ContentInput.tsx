@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { container, textarea, counter } from './ContentInput.css';
 
 interface ContentInputProps {
@@ -13,8 +14,11 @@ const ContentInput = ({
   placeholder,
   maxLength,
 }: ContentInputProps) => {
+  const [isFocused, setIsFocused] = useState(false);
   const hasValue = value.length > 0;
-  const textareaClass = hasValue ? textarea.active : textarea.default;
+  const textareaClass =
+    isFocused && hasValue ? textarea.active : textarea.default;
+  const counterClass = isFocused ? counter.active : counter.default;
 
   return (
     <div className={container}>
@@ -23,9 +27,11 @@ const ContentInput = ({
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
         maxLength={maxLength}
       />
-      <div className={counter}>
+      <div className={counterClass}>
         {value.length}/{maxLength}
       </div>
     </div>

@@ -21,7 +21,6 @@ export const inputBase = style({
   width: '100%',
   outline: 'none',
   fontFamily: 'inherit',
-  color: themeVars.color.black,
 
   selectors: {
     '&::placeholder': {
@@ -38,12 +37,14 @@ export const input = styleVariants({
     inputBase,
     {
       borderColor: themeVars.color.lightgray100,
+      color: themeVars.color.lightgray900,
     },
   ],
   active: [
     inputBase,
     {
       borderColor: themeVars.color.green500,
+      color: themeVars.color.green800,
     },
   ],
 });

@@ -19,7 +19,6 @@ export const textareaBase = style({
   outline: 'none',
   resize: 'none',
   fontFamily: 'inherit',
-  color: themeVars.color.black,
 
   selectors: {
     '&::placeholder': {
@@ -36,21 +35,32 @@ export const textarea = styleVariants({
     textareaBase,
     {
       borderColor: themeVars.color.lightgray100,
+      color: themeVars.color.lightgray900,
     },
   ],
   active: [
     textareaBase,
     {
       borderColor: themeVars.color.green500,
+      color: themeVars.color.green800,
     },
   ],
 });
 
-export const counter = style({
-  position: 'absolute',
-  bottom: '3rem',
-  right: '3rem',
-  ...themeVars.fontStyles.body_r_14,
-  color: themeVars.color.green500,
+export const counter = styleVariants({
+  default: {
+    position: 'absolute',
+    bottom: '3rem',
+    right: '3rem',
+    ...themeVars.fontStyles.body_r_14,
+    color: themeVars.color.lightgray500,
+  },
+  active: {
+    position: 'absolute',
+    bottom: '3rem',
+    right: '3rem',
+    ...themeVars.fontStyles.body_r_14,
+    color: themeVars.color.green500,
+  },
 });
 
